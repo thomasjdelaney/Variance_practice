@@ -42,7 +42,7 @@ var_y_given_x = exp_y2_given_x - np.power(exp_y_given_x, 2)
 
 exp_var_y_given_x = np.dot(x_distn, var_y_given_x)
 
-var_exp_y_given_x = np.dot(x_distn, np.power(exp_y_given_x, 2)) - np.power(np.dot(x_distn, exp_y_given_x), 2)
+var_exp_y_given_x = np.dot(x_distn, np.power(exp_y_given_x, 2)) - np.power(y.mean(), 2)
 
 np.isclose(np.var(y), exp_var_y_given_x + var_exp_y_given_x) # works
 
